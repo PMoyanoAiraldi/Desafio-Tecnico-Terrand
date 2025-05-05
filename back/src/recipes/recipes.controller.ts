@@ -79,7 +79,7 @@ export class RecipesController {
     @Get()
     @ApiOperation({ summary: 'Listar todas las recetas' })
     @ApiResponse({ status: 200, description: 'Lista de recetas', type: [Recipes] })
-    // @UseGuards(AuthGuard, RolesGuard)
+    @UseGuards(AuthGuard)
     // @Roles('admin')
     @ApiSecurity('bearer')
     async findAll(): Promise<Recipes[]> {
@@ -91,7 +91,7 @@ export class RecipesController {
     @ApiOperation({ summary: 'Obtener una receta por ID' })
     @ApiResponse({ status: 200, description: 'Receta encontrada', type: Recipes })
     @ApiResponse({ status: 404, description: 'Receta no encontrada' })
-    // @UseGuards(AuthGuard, RolesGuard)
+    @UseGuards(AuthGuard, RolesGuard)
     // @Roles('admin')
     @ApiSecurity('bearer')
     async findOne(@Param('id') id: string): Promise<Recipes> {

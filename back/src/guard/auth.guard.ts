@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
       const payload = await this.jwtService.verifyAsync(token, {
         secret: this.configService.get<string>('JWT_SECRET') 
       });
-      const user = await this.usersService.getUserForId(payload.sub); // 👈 Trae el usuario de la DB
+      const user = await this.usersService.getUserForId(payload.sub); //  Trae el usuario de la DB
 
       if (!user) {
         throw new UnauthorizedException('Usuario no encontrado');

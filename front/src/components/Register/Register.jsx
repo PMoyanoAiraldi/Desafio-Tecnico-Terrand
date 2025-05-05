@@ -101,7 +101,7 @@ const Register= () =>{
 
     return(
         <div className={styles.fondo}>
-        <img src="../../../public/fondohome.png"></img>
+        
         <form className={styles.form} onSubmit={handleSubmit}>
         <h1>Mis datos</h1>
         <div>

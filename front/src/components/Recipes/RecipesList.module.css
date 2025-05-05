@@ -41,3 +41,24 @@
         padding: 0.75rem;
         text-align: center;
     }
+
+    .button {
+        background-color: #ffa07a;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+        background-color: #ff8c66;
+    }
+    
+    .button:disabled {
+        background-color: #ffd2c2;
+        cursor: not-allowed;
+    }
+    

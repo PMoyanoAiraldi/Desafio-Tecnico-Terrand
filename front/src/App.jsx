@@ -12,22 +12,13 @@ function App() {
     <>
       <Routes> 
       {/* Rutas públicas */}
-      <Route path="/" element={<Navigate to="/sigIn" />} />
+      <Route path="/" element={<Navigate to="/signIn" />} />
       <Route path='/signIn' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
 
       <Route path="/recipes" element={<RecipesList />} />
       <Route path="/recipes/:id" element={<RecipeDetail />} />
       
-
-      {/* Rutas protegidas, dentro del layout */}
-      {/* <Route element={<AppLayout />}> */}
-      {/* <Route path='/welcome' element={<WelcomeScreen/>}/>
-      <Route path='/user-maintenance' element={<UserMaintenance/>}/>
-      <Route path='/user-edit/:idPerson' element={<EditUserForm/>}/>
-      <Route path='/editar-perfils/:idPerson' element={<EditUserForm/>}/>
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      <Route path='/profile' element={<Profile/>}/> */}
 
       </Routes>
     </>
